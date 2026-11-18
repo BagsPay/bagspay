@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { claimable, claimTxs, MOCK, token } from "./src/bags.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "public");
-const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml", ".png": "image/png" };
+const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg" };
 const send = (res, status, body) => { res.writeHead(status, { "content-type": "application/json", "cache-control": "no-store" }); res.end(JSON.stringify(body)); };
 const readBody = (req) => new Promise((ok) => {
   let s = "";

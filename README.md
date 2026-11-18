@@ -1,4 +1,4 @@
-<p align="center"><img src="public/logo.svg" width="88" alt="BagsPay"></p>
+<p align="center"><img src="public/logo.jpg" width="88" alt="BagsPay"></p>
 
 <h1 align="center">BagsPay</h1>
 
