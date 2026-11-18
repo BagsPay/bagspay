@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BagsPay · Creator fees, in one place</title>
+  <meta name="description" content="Lifetime fees, claimable positions and one-click claims for tokens launched on Bags (Solana).">
+  <link rel="icon" href="/logo.svg">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="hd">
+    <a class="brand" href="/"><img src="/logo.svg" alt="" width="34" height="34"><b>BagsPay</b></a>
+    <button class="btn" id="connect" type="button">Connect wallet</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Creator fees,<br><span class="grad">in one place.</span></h1>
+      <p>See what every token you launched on Bags has earned, what is ready to claim, and claim it from your own wallet.</p>
+      <form id="walletForm" class="search">
+        <input id="walletInput" placeholder="Paste a wallet address" autocomplete="off" spellcheck="false">
+        <button class="btn solid" type="submit">Show fees</button>
+      </form>
+    </section>
+
+    <section class="grid">
+      <div class="card stat"><small>Ready to claim</small><b id="total">–</b></div>
+      <div class="card stat"><small>Positions</small><b id="count">–</b></div>
+      <div class="card stat"><small>Wallet</small><b id="who" class="mono">–</b></div>
+    </section>
+
+    <section class="card">
+      <div class="row"><h2>Claimable positions</h2></div>
+      <div id="positions" class="empty">Paste a wallet or connect one to see its fees.</div>
+    </section>
+
+    <section class="card">
+      <div class="row"><h2>Look up a token</h2></div>
+      <form id="tokenForm" class="search">
+        <input id="tokenInput" placeholder="Paste a token mint" autocomplete="off" spellcheck="false">
+        <button class="btn" type="submit">Look up</button>
+      </form>
+      <div id="tokenOut"></div>
+    </section>
+  </main>
+
+  <footer>BagsPay is non-custodial: your wallet signs every claim.</footer>
+  <div id="toast" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.98.0/lib/index.iife.min.js" defer></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
